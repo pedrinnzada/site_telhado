@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sobrenos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>E|A CONSTRUCT BV</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.jpg" alt="Bedrijfslogo">
+        </a>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+
+      <nav id="nav">
+        <a href="index.html">Start</a>
+        <a href="#localizacao">Locatie</a>
+        <a href="#sobrenos">Over ons</a>
+        <a href="contato.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="about-page" id="sobrenos">
+    <div class="about-container">
+
+      <div class="about-slider">
+        <img src="sobrenos.jpg" class="active">
+        <img src="sobrenos1.jpg">
+        <img src="sobrenos2.jpg">
+      </div>
+
+      <div class="about-content">
+        <span class="section-tag">OVER ONS</span>
+        <h1>Wij bouwen aan vertrouwen sinds 2020</h1>
+
+        <p>
+          Opgericht in 2020 is ons bedrijf actief in de bouw en renovatie
+          van daken, waarbij wij complete oplossingen aanbieden met
+          focus op kwaliteit, veiligheid en duurzaamheid. Vanaf het begin
+          is het onze missie geweest om degelijk, goed uitgevoerd werk
+          te leveren dat aansluit bij de werkelijke behoeften van elke klant.
+        </p>
+
+        <p>
+          Wij realiseren zowel residentiële als commerciële projecten en
+          werken met verschillende soorten daken en structuren. Daarbij
+          maken wij altijd gebruik van hoogwaardige materialen en
+          geschikte technieken om bescherming, comfort en een lange
+          levensduur te garanderen.
+        </p>
+
+        <p>
+          Ons team bestaat uit ervaren en gekwalificeerde professionals
+          die werken met verantwoordelijkheid, organisatie en respect
+          voor afgesproken deadlines. Wij geloven dat een goed resultaat
+          begint met een degelijke planning en een zorgvuldige uitvoering —
+          waarden die dagelijks in ons werk terugkomen.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="iframe-section" id="localizacao">
+    <span class="section-tag">Locatie</span>
+    <h2>Gemakkelijk bereikbaar voor uw comfort</h2>
+    <p>Professionele service, dicht bij u.</p>
+
+    <div class="iframe-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4143.149608207021!2d4.89832111948477!3d51.13838092683066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c14e5d4424680d%3A0xf55a21128a1f15fd!2sHofstraat%205%2C%202260%20Westerlo%2C%20B%C3%A9lgica!5e0!3m2!1spt-BR!2sbr!4v1766421029088!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-brand">
+        <img src="logo.jpg" alt="EA CONSTRUCT BV">
+        <p>Wij zorgen voor uw project met uitmuntendheid, aandacht en betrouwbaarheid.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigatie</h4>
+        <a href="#inicio">Start</a>
+        <a href="#localizacao">Locatie</a>
+        <a href="sobrenos.html">Over ons</a>
+        <a href="contato.html">Contact</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-map-pin"></i> Hofstraat 5 Oevel - België</p>
+        <p><i class="fa-solid fa-phone"></i> 0493 44 50 30</p>
+        <p><i class="fa-solid fa-envelope"></i> eaconstruct@outlook.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2020 E|A CONSTRUCT BV PLATTE DAKEN • Alle rechten voorbehouden</p>
+    </div>
+  </footer>
+
+</body>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+<script>
+  const slides = document.querySelectorAll(".about-slider img");
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+  }, 3500);
+</script>
+
+<script src="script.js"></script>
+
+</html>

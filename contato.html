@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contato.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>E|A CONSTRUCT BV</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.jpg" alt="Bedrijfslogo">
+        </a>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+
+      <nav id="nav">
+        <a href="index.html">Start</a>
+        <a href="#localizacao">Locatie</a>
+        <a href="sobrenos.html">Over ons</a>
+        <a href="#contato">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contato" id="contato">
+    <div class="contato-header">
+      <span>CONTACT</span>
+      <h2>Laten we Praten?</h2>
+      <p>
+        Neem contact met ons op om een offerte aan te vragen
+        of vragen te stellen over onze diensten.
+      </p>
+    </div>
+
+    <div class="contato-grid">
+      <!-- FORM -->
+      <form class="contato-form" onsubmit="enviarWhatsApp(event)">
+        <input type="text" id="nome" placeholder="Uw naam" required>
+        <input type="email" id="email" placeholder="Uw e-mailadres" required>
+        <textarea id="mensagem" placeholder="Uw bericht" rows="5" required></textarea>
+
+        <button type="submit" class="btn-enviar">
+          <i class="fa-brands fa-whatsapp"></i> Bericht versturen via WhatsApp
+        </button>
+      </form>
+
+      <!-- INFO -->
+      <div class="contato-info">
+        <h3>Contactgegevens</h3>
+
+        <div class="info-item">
+          <span><i class="fa-solid fa-map-pin"></i></span>
+          <div>
+            <strong>Locatie</strong>
+            <p>Hofstraat 5, Oevel - België</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span><i class="fa-solid fa-phone"></i></span>
+          <div>
+            <strong>Telefoon</strong>
+            <p>+32 493 44 50 30</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span><i class="fa-solid fa-envelope"></i></span>
+          <div>
+            <strong>E-mail</strong>
+            <p>eaconstruct@outlook.com</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span><i class="fa-solid fa-clock"></i></span>
+          <div>
+            <strong>Openingstijden</strong>
+            <p>Ma–Vr: 8u tot 18u</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="iframe-section" id="localizacao">
+    <span class="section-tag">Locatie</span>
+    <h2>Gemakkelijk bereikbaar voor uw comfort</h2>
+    <p>Professionele service, dicht bij u.</p>
+
+    <div class="iframe-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4143.149608207021!2d4.89832111948477!3d51.13838092683066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c14e5d4424680d%3A0xf55a21128a1f15fd!2sHofstraat%205%2C%202260%20Westerlo%2C%20B%C3%A9lgica!5e0!3m2!1spt-BR!2sbr!4v1766421029088!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container" id="#contato">
+
+      <div class="footer-brand">
+        <img src="logo.jpg" alt="EA CONSTRUCT BV">
+        <p>Wij zorgen voor uw project met uitmuntendheid, aandacht en betrouwbaarheid.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigatie</h4>
+        <a href="index.html">Start</a>
+        <a href="sobrenos.html">Over ons</a>
+        <a href="#localizacao">Locatie</a>
+        <a href="#contato">Contact</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-map-pin"></i> Hofstraat 5 Oevel - België</p>
+        <p><i class="fa-solid fa-phone"></i> 0493 44 50 30</p>
+        <p><i class="fa-solid fa-envelope"></i> eaconstruct@outlook.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2020 E|A CONSTRUCT BV PLATTE DAKEN • Alle rechten voorbehouden</p>
+    </div>
+  </footer>
+</body>
+
+<script src="script.js"></script>
+<script>
+  function enviarWhatsApp(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    const texto =
+      `Hallo! Ik neem contact op via de website%0A` +
+      `*Naam:* ${nome}%0A` +
+      `*E-mail:* ${email}%0A` +
+      `*Bericht:* ${mensagem}`;
+
+    const telefone = "32493445030";
+    const url = `https://wa.me/${telefone}?text=${texto}`;
+
+    window.open(url, "_blank");
+  }
+</script>
+
+</html>
